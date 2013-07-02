@@ -1,5 +1,5 @@
 
-1. ABOUT:
+* ABOUT:
 
 This project aims at Open Source Home Automation; consists of three parts.. and here is an overview..
 
