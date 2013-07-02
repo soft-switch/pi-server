@@ -1,0 +1,25 @@
+
+********************** TODO **********************
+
+1. Get Master Pi communicating on LAN with the following features
+
+- A static IP
+
+- Host a simple web page on Master Pi (Don't bother about aesthetics)
+
+- The webpage should have 2 clickable buttons Device 1, Device 2;
+   A word next to them saying ON or OFF; 
+    Clicking on the button should toggle state.
+
+- When the webpage is loaded on two different clients,
+   Client 1 might press button for Device 1, switching the state of it;
+    This should automatically get updated on Client 2.
+
+- The states of Device 1 and 2 should be stored into the permanent memory
+  (may be a file)(not just the RAM) of Rasp Pi,
+   so that turning off and turning on the Rasp Pi 
+    should retain the states of the devices.
+
+ [WebServer platform to be used: Open to Research]
+
+2. Boot the whole application at startup, so that powering on Master Pi should start the server.
