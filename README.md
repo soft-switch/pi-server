@@ -16,9 +16,11 @@ iii] I/Os: This is where all the action happens. These are individual peripheral
 * Installing NODE.js and npm:
 
     - change to root
-    $ sudo su
+   
+         $ sudo su
     
     - execute setup.sh script
-    $ ./setup.sh
+       
+         $ ./setup.sh
 
 
