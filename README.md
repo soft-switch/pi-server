@@ -9,9 +9,11 @@ ii] Master Pi: This is the brain of the system. All the intelligence sits here..
 
 iii] I/Os: This is where all the action happens. These are individual peripheral devices and communicate 'wirelessly' with Master Pi. Data in or data out, the I/Os do every task.. Measuring power consumption to turning on Geysers to switching between TV channels, the I/Os rule..
 
-2. Visit the TODO list    
 
-3. Installing NODE.js and npm:
+* Visit the TODO list    
+
+
+* Installing NODE.js and npm:
 
     - change to root
     $ sudo su
