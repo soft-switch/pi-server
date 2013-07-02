@@ -18,7 +18,11 @@ iii] I/Os: This is where all the action happens. These are individual peripheral
     - change to root
    
          $ sudo su
-    
+ 
+    - add executable permission to setup.sh script
+
+         $ chmod +x setup.sh
+   
     - execute setup.sh script
        
          $ ./setup.sh
