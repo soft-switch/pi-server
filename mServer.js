@@ -54,12 +54,29 @@ app.get('/', function(req, res){
 
 });
 
+// this block below handles all the file uploads
+//  from the clients
+app.get('/uploads', function(req, res){
+
+    cosole.log("Request received");
+
+    //var newFile = fs.createWriteStream("./uploads/"+req.params.text);
+    var newFile = fs.createWriteStream("some-file.txt");
+
+    req.pipe(newFile);
+
+    req.on('end',function(){
+        
+        res.end("File Uploaded");
+        });
+
+});
+
+
 // make the server listen to port
 app.listen(port);
 
 
 // a message
 console.log("Listening on port : "+port);
-
-
 
