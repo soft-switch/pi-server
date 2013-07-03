@@ -27,4 +27,13 @@ iii] I/Os: This is where all the action happens. These are individual peripheral
        
          $ ./setup.sh
 
+* Running the server
+
+    - edit the configuration (port,host) of server
+         
+         $ nano mServer_config.json
+
+    - run the server
+
+         $ node mServer.js
 
