@@ -32,6 +32,7 @@ var app = express();
 app.use(app.router);
 app.use(express.static(__dirname));
 
+
 // this block below handles all the file requests
 //  from the clients
 app.get('/', function(req, res){
