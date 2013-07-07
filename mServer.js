@@ -1,5 +1,7 @@
 /*** import the required modules ***/
 
+var exec = require('child_process').exec;
+
 // HTTP module => making HTTP request, response,
 //  creating http server...
 var http = require('http');
@@ -34,6 +36,18 @@ app.use(express.static(__dirname));
 //  from the clients
 app.get('/', function(req, res){
 
+	// code to send data serially 
+/*	exec('echo 12 >> /dev/ttyUSB0',function(err,stdout,stderr){
+
+	if(err)
+		console.log("Error occured while exec cmd");
+	else	
+			console.log("Std out: "+stdout);
+
+	});
+*/
+
+
     // read the file with the filename requested by client
     //  asynchronously
    fs.readFile('.'+req.url(),function(error,data){
@@ -48,6 +62,8 @@ app.get('/', function(req, res){
             // if file is read, display the file!
             resp.write(200);
             resp.end(data);
+
+
         }
 
     });
