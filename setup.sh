@@ -3,6 +3,13 @@
 # a simple node.js, npm installation script 
 #  Author : RPS Deepan < developer.rps@gmail.com >
 #
+
+echo
+echo ' **** [0] Update packages ****'
+echo
+sudo apt-get update
+
+
 echo
 echo ' **** [1] Creating directory : /opt/node ****'
 echo
@@ -24,27 +31,35 @@ echo ' **** [4] Copying extracted folder to /opt/node/ ****'
 echo
 sudo cp -r node-v0.11.3-linux-arm-pi/* /opt/node
  
-echo 
-echo ' **** [4] Copying extracted folder to /opt/node/ ****'
-echo
-sudo echo 'PATH=$PATH:/opt/node/bin' >> ~/.bashrc
-sudo echo 'export PATH' >> ~/.bashrc
+ echo 
+ echo ' **** [4] Copying extracted folder to /opt/node/ ****'
+ echo
+ sudo echo 'PATH=$PATH:/opt/node/bin' >> /home/pi/.bashrc
+ sudo echo 'export PATH' >> /home/pi/.bashrc
+ source /home/pi/.bashrc
 
-echo
-echo ' **** [5] Installing npm (just to be sure) ****'
-echo 
-sudo apt-get install npm
+ echo
+ echo ' **** [5] Installing npm (just to be sure) ****'
+ echo 
+ sudo apt-get install npm
 
-echo
-echo '**** [6] Testing if node and npm are installed ****'
-echo
-echo '--- NODE ---'
-node -v
-echo
-echo '--- NPM ---'
-npm -v
-echo
+ echo
+ echo '**** [6] Testing if node and npm are installed ****'
+ echo
+ echo '--- NODE ---'
+ node -v
+ echo
+ echo '--- NPM ---'
+ npm -v
+ echo
 
-exit
+
+ echo
+ echo ' **** [7] Installing git (DVCS)  ****'
+ echo 
+ sudo apt-get install git-core
+
+
+ exit
 
 
